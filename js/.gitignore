@@ -1,28 +1,20 @@
-# Node.js dependencies
 node_modules/
 npm-debug.log
-package-lock.json  # Опціонально, якщо хочете фіксувати версії залежностей, приберіть це
 
-# MongoDB data
 mongo-data/
 
-# Logs
 logs/
 *.log
 *.log.*
 
-# Environment variables
 .env
 
-# Temporary files
 *.tmp
 *.bak
 *.swp
 
-# OS-specific files
 .DS_Store
 Thumbs.db
 
-# IDE-specific files
 .vscode/
 .idea/

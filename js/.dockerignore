@@ -1,36 +1,27 @@
-# Node.js dependencies
 node_modules/
 npm-debug.log
 package-lock.json
 
-# MongoDB data
 mongo-data/
 
-# Logs
 logs/
 *.log
 *.log.*
 
-# Environment variables
 .env
 
-# Git-related
 .git/
 .gitignore
 
-# Docker-related
 docker-compose*.yml
 *.md
 
-# Temporary files
 *.tmp
 *.bak
 *.swp
 
-# OS-specific files
 .DS_Store
 Thumbs.db
 
-# IDE-specific files
 .vscode/
 .idea/
