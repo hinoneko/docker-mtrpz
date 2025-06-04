@@ -1,14 +1,18 @@
-FROM golang:1.24.3
+FROM golang:1.24.3-alpine AS builder
 
 WORKDIR /app
 
-COPY go.mod go.sum ./
+COPY . .
 
 RUN go mod download && go mod verify
 
-COPY . .
-
 RUN mkdir build && go build -o build/fizzbuzz
+
+FROM scratch
+
+COPY --from=builder /app/build/fizzbuzz .
+
+COPY --from=builder /app/templates/index.html templates/
 
 EXPOSE 8080
 
