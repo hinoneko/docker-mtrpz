@@ -8,7 +8,7 @@ RUN go mod download && go mod verify
 
 RUN mkdir build && go build -o build/fizzbuzz
 
-FROM scratch
+FROM gcr.io/distroless/base
 
 COPY --from=builder /app/build/fizzbuzz .
 
